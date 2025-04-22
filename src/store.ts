@@ -66,12 +66,20 @@ export const useStore = create<StoreState>((set) => ({
 
     const { data: nft } = await supabase
         .from('nfts')
+<<<<<<< HEAD
         .select('soldCount, mintCount')
+=======
+        .select('soldCount, maxCount')
+>>>>>>> 23d53aa8ee906e425900d416e0aacf12e75aa001
         .eq('id', nftId)
         .single();
 
     if (!nft) return console.error('❌ NFT bulunamadı');
+<<<<<<< HEAD
     if (nft.soldCount >= nft.mintCount) {
+=======
+    if (nft.soldCount >= nft.maxCount) {
+>>>>>>> 23d53aa8ee906e425900d416e0aacf12e75aa001
       alert("❌ This NFT is sold out!");
       return;
     }

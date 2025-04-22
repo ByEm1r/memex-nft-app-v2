@@ -42,7 +42,11 @@ export const NFTCard: React.FC<NFTCardProps> = ({ nft }) => {
         </div>
         <hr className="border-gray-700 my-4 shadow-lg" />
         <p className="text-gray-400 text-center">
+<<<<<<< HEAD
         {Number(nft.soldCount)}/{Number(nft.mintCount)} Minted
+=======
+          {nft.soldCount}/{nft.mintCount} Minted
+>>>>>>> 23d53aa8ee906e425900d416e0aacf12e75aa001
         </p>
         {isSoldOut && (
           <div className="absolute top-0 left-0 w-full h-full bg-gray-900 bg-opacity-75 flex items-center justify-center">

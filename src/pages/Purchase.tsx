@@ -86,7 +86,11 @@ export const Purchase: React.FC = () => {
                   <p className="text-blue-400 text-lg font-semibold">{formatPrice(nft.priceXEP)} XEP</p>
                 </div>
                 <p className="text-gray-400 text-center">
+<<<<<<< HEAD
                 {+nft.soldCount}/{+nft.mintCount} Minted
+=======
+                  {nft.soldCount}/{nft.mintCount} Minted
+>>>>>>> 23d53aa8ee906e425900d416e0aacf12e75aa001
                 </p>
               </div>
 
