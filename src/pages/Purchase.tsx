@@ -35,7 +35,7 @@ export const Purchase: React.FC = () => {
         body: JSON.stringify({
           chat_id: chatId,
           photo: nft.image || 'https://placehold.co/600x400?text=NFT+Image',
-          caption: `🔥 *New NFT Order Alert!* 🔥\n\n🎨 *NFT Title:* ${nft.title}\n💰 *Price:* ${formatPrice(nft.price)} MemeX\n👛 *Wallet:* \`${walletAddress}\`\n\n🌐 [View on Marketplace](https://nft.memextoken.org/)`,
+          caption: `🔥 *New NFT Order Alert!* 🔥\n\n🎨 *NFT Title:* ${nft.title}\n💰 *Price:* ${formatPrice(nft.price)} MemeX\n💳 *Wallet:* \`${walletAddress}\`\n\n🌐 [View on Marketplace](https://nft.memextoken.org/)`,
           parse_mode: 'Markdown',
         }),
       });
@@ -86,11 +86,7 @@ export const Purchase: React.FC = () => {
                   <p className="text-blue-400 text-lg font-semibold">{formatPrice(nft.priceXEP)} XEP</p>
                 </div>
                 <p className="text-gray-400 text-center">
-<<<<<<< HEAD
-                {+nft.soldCount}/{+nft.mintCount} Minted
-=======
-                  {nft.soldCount}/{nft.mintCount} Minted
->>>>>>> 23d53aa8ee906e425900d416e0aacf12e75aa001
+                  {Number(nft.soldCount)}/{Number(nft.mintCount)} Minted
                 </p>
               </div>
 
@@ -130,9 +126,7 @@ export const Purchase: React.FC = () => {
 
                 <button
                     onClick={handleConfirmPayment}
-                    className={`w-full ${
-                        paymentConfirmed ? 'bg-gray-500 cursor-not-allowed' : 'bg-emerald-500 hover:bg-emerald-600'
-                    } text-white font-bold py-3 px-6 rounded-lg`}
+                    className={`w-full ${paymentConfirmed ? 'bg-gray-500 cursor-not-allowed' : 'bg-emerald-500 hover:bg-emerald-600'} text-white font-bold py-3 px-6 rounded-lg`}
                     disabled={paymentConfirmed}
                 >
                   {paymentConfirmed ? 'Payment Confirmed' : 'Confirm Payment'}
